@@ -1,0 +1,12 @@
+ static int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+      List<SinglyLinkedListNode> li = new ArrayList<>();
+        while(head1!=null){
+            li.add(head1);
+            head1=head1.next;
+        }
+        while(head2!=null){
+            if(li.contains(head2)) break;
+            head2=head2.next;
+        }
+        return head2.data;
+    }
