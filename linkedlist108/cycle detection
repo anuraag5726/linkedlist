@@ -1,0 +1,16 @@
+  static boolean hasCycle(SinglyLinkedListNode head) {
+    boolean flag=false;
+        List<SinglyLinkedListNode> li = new ArrayList<>();
+        while(head.next!=null){
+            if(li.contains(head)){
+                return true;
+            }
+            else{
+                li.add(head);
+                flag=false;
+            }
+            head=head.next;
+        }
+      return false;
+
+    }
