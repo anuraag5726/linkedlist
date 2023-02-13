@@ -1,0 +1,12 @@
+public class Solution {
+	public static void deleteNode(LinkedListNode<Integer> node) {
+	LinkedListNode head=node;
+    if(head.data==node.data){
+        head.data=head.next.data;
+        head.next=head.next.next;
+    }
+   
+    
+     
+    }
+}
