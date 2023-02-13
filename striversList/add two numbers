@@ -1,0 +1,24 @@
+public class Solution {
+    static LinkedListNode addTwoNumbers(LinkedListNode head1, LinkedListNode head2) {
+      LinkedListNode dum = new LinkedListNode(0);
+      LinkedListNode curr=dum;
+      int car=0;
+      while(head1!=null || head2!=null|| car==1){
+          int sum=0;
+          if(head1!=null){
+               sum+=head1.data;
+               head1=head1.next;
+          }
+          if(head2!=null){
+              sum+=head2.data;
+              head2=head2.next;
+          }
+          sum+=car;
+          car=sum/10;
+          LinkedListNode val= new LinkedListNode(sum%10);
+            curr.next=val;
+            curr=val;
+      }
+      return dum.next;
+    }
+}
